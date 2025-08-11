@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaperskiy Team</title>
+    <!-- Внутри <head> вашего HTML -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class ="p-10">
+    <div class = "relative overflow-x-auto">
+       <table class="mx-auto w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400" id = "usersList">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"> 
+              <tr>
+                  <th scope="col" class="px-auto py-3" id="club">
+                   Клуб
+                  </th>
+                  <th scope="col" class="px-auto py-3" id="city">
+                   Город
+                  </th>
+                  <th scope="col" class="px-auto py-3" id="address">
+                   Адрес
+                  </th>
+                   <th scope="col" class="px-auto py-3" id="">
+
+                  </th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+       </table>
+       <button id="addbutton" type="button" class="flex w-20 justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Добавить</button>
+       <div id="formContainer" style="display: none;">
+        <form id="dataForm">
+            <label for="club2">Клуб:</label>
+            <input type="text" id="club2" required><br><br>
+            <label for="city2">Город:</label>
+            <input type="text" id="city2" required><br><br>
+            <label for="address2">Адрес:</label>
+            <input type="text" id="address2" required><br><br>
+            <button type="button" id='saveButton' class='bg-red-500 text-white px-4 py-2 rounded mr-2'>Сохранить</button>
+<button type='button' id='cancelButton' class='bg-gray-400 text-white px-4 py-2 rounded'>Отмена</button>
+        </form>
+    </div>
+     <table class="mx-auto w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400" id = "athletesList">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"> 
+              <tr>
+                  <th scope="col" class="px-auto py-3" id="name">
+                   Имя
+                  </th>
+                  <th scope="col" class="px-auto py-3" id="surname">
+                   Фамилия
+                  </th>
+                  <th scope="col" class="px-auto py-3" id="belt">
+                   Пояс
+                  </th>
+                   <th scope="col" class="px-auto py-3" id="train">
+                   Опыт
+                  </th>
+                    <th scope="col" class="px-auto py-3" id="achiv">
+                   Достижения
+                  </th>
+                   <th scope="col" class="px-auto py-3" id="">
+
+                  </th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+       </table>
+       <button id="addbutton2" type="button" class="flex w-20 justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Добавить</button>
+       <div id="formContainer2" style="display: none;">
+        <form id="dataForm2">
+            <label for="name2">Имя:</label>
+            <input type="text" id="name2" required><br><br>
+            <label for="surname2">Фамилия:</label>
+            <input type="text" id="surname2" required><br><br>
+            <label for="belt2">Пояс:</label>
+            <input type="text" id="belt2" required><br><br>
+            <label for="train2">Опыт:</label>
+            <input type="text" id="train2" required><br><br>
+            <label for="achiv2">Достижения:</label>
+            <input type="text" id="achiv2" required><br><br>
+            <button type="button" id='saveButton2' class='bg-red-500 text-white px-4 py-2 rounded mr-2'>Сохранить</button>
+<button type='button' id='cancelButton2' class='bg-gray-400 text-white px-4 py-2 rounded'>Отмена</button>
+        </form>
+    </div>
+    </div>
+ </div>
+</body>
+    <script type="module" src="database.js"></script>
+    <script type="module" src="adddata.js"></script>
+</html>
